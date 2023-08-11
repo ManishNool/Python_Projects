@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DeBERTa Q&A</title>
+</head>
+<body>
+    <h1>DeBERTa Question Answering</h1>
+    <form method="post" action="/">
+        <label for="paragraph">Paragraph:</label><br>
+        <textarea id="paragraph" name="paragraph" rows="4" cols="50" required></textarea><br><br>
+        <label for="question">Question:</label><br>
+        <input type="text" id="question" name="question" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    {% if answer_gpu %}
+    <h2>Results:</h2>
+    <p><strong>Answer (GPU):</strong> {{ answer_gpu }}</p>
+    <p><strong>Time taken (GPU):</strong> {{ time_taken_gpu }} seconds</p>
+    <p><strong>Time taken (CPU):</strong> {{ time_taken_cpu }} seconds</p>
+    <p><strong>GPU Speedup:</strong> {{ percent_fast }}%</p>
+    {% endif %}
+</body>
+</html>

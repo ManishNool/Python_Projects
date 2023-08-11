@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Data</title>
+</head>
+<body>
+    <h1>View Data</h1>
+    <ul>
+        {% for item in data %}
+            <li>Word: {{ item[0] }}</li>
+            <li>Index: {{ item[1] }}</li>
+            <li>First Occurrence Index: {{ item[2] }}</li>
+            <br>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for item in data1 %}
+            <li>Word: {{ item[0] }}</li>
+            <li>Index: {{ item[1] }}</li>
+            <li>First Occurrence Index: {{ item[2] }}</li>
+            <li>Frequency: {{ item[3] }}</li>
+            <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
